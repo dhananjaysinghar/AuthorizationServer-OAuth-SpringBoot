@@ -22,8 +22,7 @@ curl --location --request POST 'http://localhost:8080/oauth/token?username=dhana
 ## Get Access Token from Refresh Token
 ~~~
 curl --location --request POST 'http://localhost:8080/oauth/token?grant_type=refresh_token&refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJhdGkiOiI0YTI3YzNhMS0wOTZlLTQ3NGQtOTFiMi1lYWY5OTE3MGY5MGEiLCJleHAiOjE1OTY3ODE4NDIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwianRpIjoiZDEyMzZlZjMtZWI4Zi00YjRmLTg2ZTQtMjhmZjQwMTc5MzUwIiwiY2xpZW50X2lkIjoidGVzdCJ9.p2DJwNt70vnNp-bi2RstWr_y86-6YBaE_8YMwD5xj04' \
---header 'Authorization: Basic dGVzdDp0ZW1w' \
---header 'Cookie: JSESSIONID=940FF9E0315F6367C3DF36700B4D6385'
+--header 'Authorization: Basic dGVzdDp0ZW1w'
 ~~~
 
 ## Validate Access Token 
