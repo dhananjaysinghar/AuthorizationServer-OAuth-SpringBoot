@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "f819dd73-d0ab-4f19-afeb-10fc3958f37c",
+		"name": "OAUTH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GenerateToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dGVzdDp0ZW1w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/oauth/token?username=dhananjaya&password=Real@123&grant_type=password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "dhananjaya"
+						},
+						{
+							"key": "password",
+							"value": "Real@123"
+						},
+						{
+							"key": "grant_type",
+							"value": "password"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GenerateToken_Using_RefreshToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dGVzdDp0ZW1w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/oauth/token?grant_type=refresh_token&refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJhdGkiOiI0YTI3YzNhMS0wOTZlLTQ3NGQtOTFiMi1lYWY5OTE3MGY5MGEiLCJleHAiOjE1OTY3ODE4NDIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwianRpIjoiZDEyMzZlZjMtZWI4Zi00YjRmLTg2ZTQtMjhmZjQwMTc5MzUwIiwiY2xpZW50X2lkIjoidGVzdCJ9.p2DJwNt70vnNp-bi2RstWr_y86-6YBaE_8YMwD5xj04",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token"
+						},
+						{
+							"key": "refresh_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJhdGkiOiI0YTI3YzNhMS0wOTZlLTQ3NGQtOTFiMi1lYWY5OTE3MGY5MGEiLCJleHAiOjE1OTY3ODE4NDIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwianRpIjoiZDEyMzZlZjMtZWI4Zi00YjRmLTg2ZTQtMjhmZjQwMTc5MzUwIiwiY2xpZW50X2lkIjoidGVzdCJ9.p2DJwNt70vnNp-bi2RstWr_y86-6YBaE_8YMwD5xj04"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ValidateAccessToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dGVzdDp0ZW1w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/oauth/check_token?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTY3ODExNjksInVzZXJfbmFtZSI6ImRoYW5hbmpheWEiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiNDYxYmE0ZGYtNTE3Zi00MjlmLWI5YmYtZjFmMjA1YThmNGNjIiwiY2xpZW50X2lkIjoidGVzdCIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdfQ.Aqy5y22ia827sBaCNOhqq7l6NkKav2bbiwGmGswLbfI",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"check_token"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTY3ODExNjksInVzZXJfbmFtZSI6ImRoYW5hbmpheWEiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiNDYxYmE0ZGYtNTE3Zi00MjlmLWI5YmYtZjFmMjA1YThmNGNjIiwiY2xpZW50X2lkIjoidGVzdCIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdfQ.Aqy5y22ia827sBaCNOhqq7l6NkKav2bbiwGmGswLbfI"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Dhananjaya\",\r\n  \"lastName\": \"Samanta Singhar\",\r\n  \"password\": \"Real@123\",\r\n  \"userName\": \"dhananjaya\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
