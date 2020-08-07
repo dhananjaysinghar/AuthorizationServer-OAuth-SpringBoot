@@ -92,6 +92,15 @@ VALUES
     'read,write', 'password,refresh_token,client_credentials,authorization_code',
         'ROLE_TRUSTED_CLIENT', 300, 1800);
 
+--DUMMY Users CREATION
+-- USER -- non-encrypted password: user
+INSERT INTO app_user (id, first_name, last_name, password, username)
+    VALUES (1, 'User', 'User', '$2a$10$rE46dyEdCVg19nXfWm79jejq2vMridXTbb0ppiLDq6GVIi15er3oC', 'user');
+
+-- USER -- non-encrypted password: admin
+INSERT INTO app_user (id, first_name, last_name, password, username)
+    VALUES (2, 'Admin', 'Admin', '$2a$10$SQL8Sg/O3/53zTzjQRh8B.yZeOhjva75ylvrdTMdTmnJFWf4MmPzC', 'admin');
+
 
 INSERT INTO app_role (id, role_name, description)
     VALUES (1, 'ROLE_USER', 'User - Has no admin rights');
@@ -106,11 +115,3 @@ INSERT INTO user_role(user_id, role_id) VALUES(2,2);
 
 -- END USER CREDENTIALS --
 
---DUMMY Users CREATION
--- USER -- non-encrypted password: user
-INSERT INTO app_user (id, first_name, last_name, password, username)
-    VALUES (1, 'User', 'User', '$2a$10$rE46dyEdCVg19nXfWm79jejq2vMridXTbb0ppiLDq6GVIi15er3oC', 'user');
-
--- USER -- non-encrypted password: admin
-INSERT INTO app_user (id, first_name, last_name, password, username)
-    VALUES (2, 'Admin', 'Admin', '$2a$10$SQL8Sg/O3/53zTzjQRh8B.yZeOhjva75ylvrdTMdTmnJFWf4MmPzC', 'admin');
