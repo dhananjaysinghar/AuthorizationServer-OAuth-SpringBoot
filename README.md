@@ -26,8 +26,8 @@ curl --location --request POST 'http://localhost:8080/oauth/token?grant_type=ref
 --header 'Cookie: JSESSIONID=940FF9E0315F6367C3DF36700B4D6385'
 ~~~
 
-~~~
 ## Validate Access Token 
+~~~
 curl --location --request POST 'http://localhost:8080/oauth/check_token?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTY3ODIyNTksInVzZXJfbmFtZSI6ImRoYW5hbmpheWEiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiMzY4MTcwZjgtOWRhMS00MGJjLTk3NzctNTQ1NGJmOTg0NmE1IiwiY2xpZW50X2lkIjoidGVzdCIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdfQ.rkr2DATNGiyUKurYLFQuNo_9a4RK9i_dSfsoh8htIXQ' \
 --header 'Authorization: Basic dGVzdDp0ZW1w'
 ~~~
