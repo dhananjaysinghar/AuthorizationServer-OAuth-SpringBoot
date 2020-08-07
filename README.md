@@ -15,8 +15,25 @@ curl --location --request POST 'http://localhost:8080/oauth/users' \
 
 ## Get Access Token
 ~~~
+
+Request:
+-----------
 curl --location --request POST 'http://localhost:8080/oauth/token?username=dhananjaya&password=Real@123&grant_type=password' \
 --header 'Authorization: Basic dGVzdDp0ZW1w'
+
+
+Response:
+-----------
+{
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTY3ODIzOTYsInVzZXJfbmFtZSI6ImRoYW5hbmpheWEiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiNTFkZTEzNDYtMzRjNS00MThhLWI2ZmYtODU4YTU3OTc3OTQxIiwiY2xpZW50X2lkIjoidGVzdCIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdfQ.lcShaWVmARQzvZkT1R_F9s6L0wBVKnfrE0NZEC00tEk",
+    "token_type": "bearer",
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJkaGFuYW5qYXlhIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImF0aSI6IjUxZGUxMzQ2LTM0YzUtNDE4YS1iNmZmLTg1OGE1Nzk3Nzk0MSIsImV4cCI6MTU5Njc4Mzg5NiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6ImY2MTIzNmQ0LWY5YTItNGY2Ni04NGVlLWQ0ZTA3ZjUxZDQzZiIsImNsaWVudF9pZCI6InRlc3QifQ.9teUKWXfodg47O7t6BZQi_GLm9Ox5rmDYmhRlKRsYI0",
+    "expires_in": 299,
+    "scope": "read write",
+    "jti": "51de1346-34c5-418a-b6ff-858a57977941"
+}
+
+
 ~~~
 
 ## Get Access Token from Refresh Token
